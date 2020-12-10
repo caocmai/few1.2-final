@@ -1,0 +1,18 @@
+.BandList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+.BandDetails {
+    border: 2px solid black;
+    /* display: flex; */
+    padding: 20px;
+}
+
+.filter-field {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    margin: 40px;
+}
