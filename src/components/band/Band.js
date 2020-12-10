@@ -34,7 +34,7 @@ class Band extends Component {
         <br></br>
         <ul>
           {style.split(",").map((s) => (
-            <li>{s}</li>
+            <li key={s}>{s}</li>
           ))}
         </ul>
 
