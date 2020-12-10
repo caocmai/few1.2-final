@@ -9,7 +9,7 @@ class Band extends Component {
       id: props.id,
     };
   }
-  
+
   split(condition) {
     if (condition === "-") {
       return <LikeButton count='1' />;
@@ -26,10 +26,19 @@ class Band extends Component {
       <div className='BandDetails'>
         <h1>{band_name}</h1>
         <p style={{ fontWeight: "bold" }}>
-          Origin: {origin} Fans: {fans} Formed: {formed} Split: {split}
+          Origin: {origin}
+          Fans: {fans.toLocaleString("en-US", {
+            maximumFractionDigits: 2,
+          })}{" "}
+          Formed: {formed} Split: {split}
         </p>
         <br></br>
-        <p>{style}</p>
+        <ul>
+          {style.split(",").map((s) => (
+            <li>{s}</li>
+          ))}
+        </ul>
+
         {this.split(split)}
       </div>
     );
