@@ -26,8 +26,7 @@ class Band extends Component {
       <div className='BandDetails'>
         <h1>{band_name}</h1>
         <p style={{ fontWeight: "bold" }}>
-          Origin: {origin}
-          Fans: {fans.toLocaleString("en-US", {
+          Origin: {origin} Fans: {fans.toLocaleString("en-US", {
             maximumFractionDigits: 2,
           })}{" "}
           Formed: {formed} Split: {split}
